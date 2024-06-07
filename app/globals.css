@@ -2,32 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.container {
+  width: 568px;
+  height: 946px;
+  padding: 20px, 0px, 20px, 0px;
+  background-color: white;
+}
+.draggable-board {
+  width: fit-content;
+}
+.draggable-line {
+
+  background-color: #1E9BF0;
+  height: 3px;
+}
+.draggable-item {
+  width: 568px;
+  height: 136px;
+  border: 1px 0px 1px 0px;
+  padding: 20px 40px 20px 40px;
+  border-color: #FFFFFF;
+  gap: 24px
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.draggable-item-disabled {
+  background-color: #F4F5F6;
+
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.draggable-item .image {
+  border-radius: 12px;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.draggable-item .icon {
+  width: 16px;
+  height: 22px;
+}
+
+.draggable-item .title {
+  font-weight: 500;
+  font: Geion;
+  font-size: 19px;
+  line-height: 24px;
+  color: #292B36;
+
+}
+
+
+.draggable-item .location {
+ 
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+  color: #A8A9AE;
+  padding: 0px;
+  
 }
